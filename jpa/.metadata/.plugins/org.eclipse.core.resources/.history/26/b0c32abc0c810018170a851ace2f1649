@@ -1,0 +1,28 @@
+package info.inetsolv;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+public class App {
+
+	public static void main(String[] args) {
+
+		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("abc");
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		String nquery="select * from emp_tbl";	
+		Query nativeQuery = entityManager.createNativeQuery(nquery);
+		List list = nativeQuery.getResultList();
+		for (Object object : list) {
+			Object[] data=(Object[])object;
+			System.out.println(data[0] );
+			System.out.println(data[1]);
+			System.out.println(data[2]);
+		}
+		
+	}
+
+}

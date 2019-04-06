@@ -1,0 +1,5 @@
+#Tomcat publish data
+#Fri Jul 06 14:58:25 IST 2018
+org.eclipse.jst.jee.server\:/binary\:D\:\\eclipselink\\jlib\\jpa\\org.eclipse.persistence.jpars_2.7.1.v20171221-bd47e8f.jar=WEB-INF/lib/org.eclipse.persistence.jpars_2.7.1.v20171221-bd47e8f.jar
+org.eclipse.jst.jee.server\:/binary\:D\:\\eclipselink\\jlib\\jpa\\org.eclipse.persistence.jpars.source_2.7.1.v20171221-bd47e8f.jar=WEB-INF/lib/org.eclipse.persistence.jpars.source_2.7.1.v20171221-bd47e8f.jar
+org.eclipse.jst.j2ee.server\:jpademo1=WEB-INF/lib/jpademo1.jar

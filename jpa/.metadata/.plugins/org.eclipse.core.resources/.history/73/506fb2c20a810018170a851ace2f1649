@@ -1,0 +1,25 @@
+package info.inetsolv;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
+
+public class App {
+
+	public static void main(String[] args) {
+
+		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("abc");
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		entityManager.getTransaction().begin();
+		Query query = entityManager.createQuery("delete e from employee e where e.eno=9");
+		int no = query.executeUpdate();
+		System.out.println(no);
+		entityManager.getTransaction().commit();
+		
+	}
+
+}

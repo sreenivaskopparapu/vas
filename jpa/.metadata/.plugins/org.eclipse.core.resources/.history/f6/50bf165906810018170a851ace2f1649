@@ -1,0 +1,24 @@
+package info.inetsolv;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
+
+public class App {
+
+	public static void main(String[] args) {
+		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("abc");
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		TypedQuery<Employee> typedQuery = entityManager.createNamedQuery("findBySalary", Employee.class);
+	
+	
+	List<Employee> resultList = typedQuery.getResultList();
+	for (Employee employee : resultList) {
+		System.out.println(employee);
+	}
+	}
+
+}
